@@ -1,0 +1,439 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* height: 7000px; */
+    perspective: 700px;
+}
+.header-container {
+    width: 80%;
+    margin: auto;
+}
+.header-content {
+    overflow: auto;
+}
+.header-content img {
+    width:100px ;
+    float: left;
+}
+.unstyled-list {
+    list-style: none;
+}
+.unstyled-list a {
+    text-decoration: none;
+    color: black;
+    font-family: "Kanit", sans-serif;
+}
+nav {
+    height: 100px;
+}
+.header-content ul li {
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 30px;
+    font-size: 20px;
+    padding: 0px 5px;
+}
+.drop-down {
+    margin-left: 20px;
+}
+.drop-down-menu {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-column-gap: 20px;
+    padding: 15px;
+    margin-top: 5px;
+    border: 2px solid black;
+    width: 600px;
+    background-color: white;
+    transform: scale(0);
+    transition: 0.5s;
+    z-index: 7;
+    margin-left: -5px;
+}
+.link-item {
+    position: relative;
+    padding: 0px 3px;
+}
+.drop1 h4 {
+    border-bottom: 2px dotted rgb(117, 0, 0);
+    width: 75px;
+}
+.drop-down:hover .drop-down-menu {
+    transform: scale(1);
+}
+.drop1 h4 , p {
+    padding: 5px 0px;
+}
+.link-item::after {
+    position: absolute;
+    content: "";
+    width: 102%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    transform: scale(0 , 1);
+    transform-origin: left;
+    transition: 0.7s;
+}
+.link-item:hover::after {
+    transform: scale(1 , 1);
+}
+.link-item::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 108%;
+    top: 0;
+    left: 0;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    transform: scale(1 , 0);
+    transform-origin: center;
+    transition: 0.3s;
+}
+.link-item:hover::before {
+    transform: scale(1 , 1);
+}
+
+/* ----------------------------------------------------------------  */
+.main-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.main-container img{
+    width: 100%;
+    height: 450px;
+}
+.main-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 730px;
+    margin-top: 50px;
+}
+.main-content h2 {
+    font-family: "Kanit", sans-serif;
+    color: white;
+    font-size: 50px;
+}
+.main-content button {
+    font-family: "Kanit", sans-serif;
+    border: none ;
+    width: 150px;
+    height: 20px;
+    border-radius: 10px;
+    margin-left: 60px;
+}
+/* --------------------------------------------- */
+
+.section1-container {
+    width: 80%;
+    margin: auto;
+}
+.section1-title {
+    text-align: center;
+    margin-top: 40px;
+}
+.section1-title h2 {
+    font-family: "Kanit", sans-serif;
+    font-size: 30px; 
+}
+.section1-line {
+    width: 100px;
+    height: 2px;
+    background-color: rgb(117, 0, 0);
+    margin: auto;
+    margin-top: 5px;
+    transition: 1s;
+}
+.section1-title:hover .section1-line {
+    transform: scaleX(2);
+    transition: 1s;
+    
+}
+.section1-content {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-column-gap: 10px;
+    margin-top: 20px;
+}
+.section1-up  {
+    position: relative;
+}
+.section1-up img {
+    width: 100%;
+    height: 250px;   
+}
+.section1-up .p-down {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Kanit", sans-serif;
+}
+.section1-up i {
+    display: inline-block;
+    background-color: rgb(117, 0, 0);
+    color: white;
+    width: 30px;
+    height: 30px;   
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+.section1-up .p-up {
+    color: rgb(105, 105, 105);
+    font-size: 18px;
+    width: 100px;
+    font-family: "Kanit", sans-serif;
+}
+.section1-up:hover .icon {
+    display: block;
+}
+/* ------------------------------------------------------ */
+.section2-content {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-column-gap: 20px;
+    margin-top: 30px;
+
+}
+.down1{
+    grid-column: 1/3;
+    background-color: #f7f7f7;
+}
+.down-title i {
+    color: rgb(117, 0, 0);
+    font-size: 70px;
+    display: inline-block;
+    margin-left: 20px;
+}
+.p2 {
+    font-family: "Kanit", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    height: 30px;
+}
+.pp {
+    display: inline-block;
+}
+.p3{
+    font-family: "Kanit", sans-serif;   
+    font-size: 20px;
+    
+}
+.p4 {  
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 15px;
+    font-family: "Kanit", sans-serif; 
+}
+.down2 {
+    background-image: url(../images/1.jpg);
+    background-size: cover ;
+    height: 250px;
+
+}
+.down3 {
+    background-image: url(../images/section-11.jpg);
+    background-size: cover;
+}
+.p-abs  {
+    font-family: "Kanit", sans-serif; 
+    color: black;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.section2-line {
+    width: 50px ;
+    height: 2px;
+    background-color: rgb(117, 0, 0);
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 20px;
+
+}
+.line-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-content: end ;
+}
+.abs1 {
+    color: rgba(117, 0, 0, 0.6);
+    font-size: 17px;
+    margin-top: 10px;
+}   
+.abs2 {
+    margin-top: -10px
+}
+.scale {
+    transition: 0.5s;
+}
+.scale:hover {
+    transform: scale(1.1 , 1.1);    
+}
+hr {
+    margin-top: 50px;
+}
+.section3-content {
+    display: flex;
+    margin-top: 55px;
+}
+.section3-img{
+    text-align: center;
+    border-right: 1px solid rgb(117, 0, 0);
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.section3-icon{
+    background-image: url(../images/service-icon.png);
+    height: 55px;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+.section3-p1 {
+    font-size: 20px;
+    font-family: "Kanit", sans-serif; 
+}
+.section3-p2 {
+    font-size: 15px;
+    font-family: "Kanit", sans-serif; 
+    color: rgb(105, 105, 105);
+}
+.img5 {
+    border: none;
+}
+.icon1 {
+    background-position: center 5px;
+}
+.section3-img:hover .icon1{
+    background-position: center -86px;
+}
+.icon2 {
+    background-position: center -180px;
+}
+.section3-img:hover .icon2{
+    background-position: center -270px;
+}
+.icon3 {
+    background-position: center -365px;
+}
+.section3-img:hover .icon3{
+    background-position: center -458px;
+}
+.icon4 {
+    background-position: center -549px;
+}
+.section3-img:hover .icon4{
+    background-position: center -642px;
+}
+.icon5 {
+    background-position: center -734px;
+}
+.section3-img:hover .icon5{
+    background-position: center -825px;
+}
+/* ------------------------------- */
+.third-section {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.third-title{
+    margin-top: 100px;
+    text-align: center;
+}
+.third-h {
+    font-family: "Kanit", sans-serif; 
+    font-size: 30px;
+}
+
+.third-ps p{
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 40px;
+    text-align: center;
+    font-family: "Kanit", sans-serif; 
+    color: rgb(105, 105, 105);
+    
+}
+.third-ps{
+    margin-left: 300px;
+}
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-column-gap: 20px;
+    grid-template-rows: repeat(2 , 1fr);
+    grid-row-gap: 20px;
+    margin-top: 50px;
+}
+.sections{
+    height: 400px;
+
+}
+.sections img {
+    width: 100%;
+    height: 80%;
+}
+.section-info p  {
+    font-family: "Kanit", sans-serif; 
+}
+.section-icons {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% ,-50% );
+}
+.section-icons i {
+    margin-left: 5px;
+    font-size: 30px;
+    color: rgba(117, 0, 0,0.7);
+}
+.sections {
+    position: relative;
+}
+.section-info .wi {
+    color: yellow;
+}
+.section-info {
+    margin-top: 5px;
+}
+.section-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: 0.3s;
+}
+.section-overlay{
+    height: 100%;
+}
+.sections:hover .section-overlay {
+    transform: scalex(1);
+}
+.third-line {
+    width: 100px;
+    height: 2px;
+    background-color: rgb(117, 0, 0);
+    margin: auto;
+    margin-top: 5px;
+    transition: 1s;
+}
+.third-title:hover .third-line {
+    transform: scaleX(2);
+    transition: 1s;
+    
+}
